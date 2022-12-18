@@ -18,7 +18,7 @@ author_profile: true
 
 
 
-<table border-collapse: collapse;>
+<table>
 <tr>
  <td valign="center"><img width="400" src="https://github.com/alpoler/alpoler.github.io/blob/master/images/a.JPG" /></td> 
   <td valign="center"> Elimination of Non-Novel Segments at Multi-Scale for Few-Shot Segmentation <br \> 
