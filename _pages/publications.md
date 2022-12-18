@@ -38,6 +38,8 @@ author_profile: true
     <br \>  Alper Kayabaşı, Kaan Karaman, Ibrahim Batuhan Akkaya
     <br \> Automatic Target Recognition XXXI @ Society of Photo-Optical Instrumentation Engineers (SPIE), 2021 <a href= "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11729/117290F/Comparison-of-distance-metric-learning-methods-against-label-noise-for/10.1117/12.2587246.short?SSO=1">PDF</a>
   </td>
-</tr></table>
+</tr>
+
+
 
 
