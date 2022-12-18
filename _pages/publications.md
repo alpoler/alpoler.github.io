@@ -15,6 +15,9 @@ author_profile: true
   {% include archive-single.html %}
 {% endfor %}
 
-**Alper Kayabaşı**, Gülin Tüfekci, İlkay Ulusoy. **Elimination of Non-Novel Segments at Multi-Scale for Few-Shot Segmentation**, in Winter Conference on Applications of Computer Vision (WACV), 2023 ([PDF](https://arxiv.org/abs/2211.02300))
+Alper Kayabaşı, Gülin Tüfekci, İlkay Ulusoy. **Elimination of Non-Novel Segments at Multi-Scale for Few-Shot Segmentation**, in Winter Conference on Applications of Computer Vision (WACV), 2023 ([PDF](https://arxiv.org/abs/2211.02300))
 
-Gülin Tüfekci*, **Alper Kayabaşı***, Erdem Akagündüz, İlkay Ulusoy. **Detecting Driver Drowsiness as an Anomaly Using LSTM Autoencoders**, in  In-Vehicle Sensing and Monitorization Workshop @ European Conference on Computer Vision (ECCV), 2022 ([PDF](https://arxiv.org/abs/2209.05269)), (*Equal Contribution)
+Gülin Tüfekci*, Alper Kayabaşı, Erdem Akagündüz, İlkay Ulusoy. **Detecting Driver Drowsiness as an Anomaly Using LSTM Autoencoders**, in  In-Vehicle Sensing and Monitorization Workshop @ European Conference on Computer Vision (ECCV), 2022 ([PDF](https://arxiv.org/abs/2209.05269)), (*Equal Contribution)
+
+
+Alper Kayabasi, Kaan Karaman, Ibrahim Batuhan Akkaya. **Comparison of distance metric learning methods against label noise for fine-grained recognition**, in Automatic Target Recognition XXXI @ Society of Photo-Optical Instrumentation Engineers (SPIE), 2021 ([PDF](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11729/117290F/Comparison-of-distance-metric-learning-methods-against-label-noise-for/10.1117/12.2587246.short?SSO=1))
