@@ -22,14 +22,14 @@ author_profile: true
  <td valign="center"><img width="600" src="https://alpoler.github.io/images/a.JPG" /></td> 
   <td valign="center"> Elimination of Non-Novel Segments at Multi-Scale for Few-Shot Segmentation <br> 
     Alper Kayabaşı, Gülin Tüfekci, İlkay Ulusoy <br>
-    Winter Conference on Applications of Computer Vision (WACV), 2023 <a href = https://arxiv.org/pdf/2211.02300.pdf> PDF </a> 
+    Winter Conference on Applications of Computer Vision (WACV), 2023 <a href =>https://arxiv.org/pdf/2211.02300.pdf>PDF</a> 
   </td> 
 </tr>
 <tr>
   <td valign="center"> <img width="600" src="https://alpoler.github.io/images/arch.png" /> </td> 
   <td> Detecting Driver Drowsiness as an Anomaly Using LSTM Autoencoders 
     <br>  Gülin Tüfekci*, Alper Kayabaşı*, Erdem Akagündüz, İlkay Ulusoy 
-    <br>    ISM Workshop @ European Conference on Computer Vision (ECCV), 2022 <a href= "https://arxiv.org/abs/2209.05269">PDF</a> <br \>(*Equal Contribution) 
+    <br>    ISM Workshop @ European Conference on Computer Vision (ECCV), 2022 <a href= "https://arxiv.org/abs/2209.05269">PDF</a> <br>(*Equal Contribution) 
   </td>
 
 <tr>
