@@ -18,8 +18,11 @@ author_profile: true
 
 
 
+
+
+
 <table><tr>
- <td valign="center"><img width="500" src="https://alpoler.github.io/images/a.JPG" /></td> 
+ <td valign="center"><img width="500" src="https://alpoler.github.io/images/bampp.JPG" /></td> 
   <td valign="center"> Elimination of Non-Novel Segments at Multi-Scale for Few-Shot Segmentation <br> 
     Alper Kayabaşı, Gülin Tüfekci, İlkay Ulusoy <br>
     Winter Conference on Applications of Computer Vision (WACV), 2023 <a href= "https://arxiv.org/pdf/2211.02300.pdf">PDF</a> 
