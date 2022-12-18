@@ -17,4 +17,4 @@ author_profile: true
 
 **Alper Kayabaşı**, Gülin Tüfekci, İlkay Ulusoy. **Elimination of Non-Novel Segments at Multi-Scale for Few-Shot Segmentation**, in Winter Conference on Applications of Computer Vision (WACV), 2023 ([PDF](https://arxiv.org/abs/2211.02300))
 
-Gülin Tüfekci*, **Alper Kayabaşi***, Erdem Akagündüz, İlkay Ulusoy. **Detecting Driver Drowsiness as an Anomaly Using LSTM Autoencoders**, in  In-Vehicle Sensing and Monitorization Workshop @ European Conference on Computer Vision (ECCV), 2022 ([PDF](https://arxiv.org/abs/2209.05269)), (*Equal Contribution)
+Gülin Tüfekci*, **Alper Kayabaşı***, Erdem Akagündüz, İlkay Ulusoy. **Detecting Driver Drowsiness as an Anomaly Using LSTM Autoencoders**, in  In-Vehicle Sensing and Monitorization Workshop @ European Conference on Computer Vision (ECCV), 2022 ([PDF](https://arxiv.org/abs/2209.05269)), (*Equal Contribution)
