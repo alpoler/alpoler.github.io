@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-[Link](https://alpoler.github.io/alperkayabasi_cv.pdf)
+[Link](https://alpoler.github.io/alper_kayabasi_cv.pdf)
