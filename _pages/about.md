@@ -9,5 +9,7 @@ redirect_from:
 ---
 
 <p align="justify">
-I have pursued Master Degree in Electrical and Electronic Engineering at Middle East Technical University under supervision of Prof. Dr. İlkay Ulusoy. At the same time, I have worked as research engineer at Aselsan. I am interested in subject of few-shot segmentation and video action recognition. My aim is to develop deep learning models that can be generalized with less supervision, less prone to forgetting what they learned previously, and be capable of identifying what it does not know.
+I am a Ph.D. candidate in Electrical Engineering at the University of California, Riverside, under the supervision of Assistant Professor Vishwanath Saragadam. My research focuses on implicit neural representations and low-level video processing. I aim to develop learnable, compact vision models capable of accurately extracting comprehensive information from noisy, incomplete, or sparse measurements.
+
+Prior to my Ph.D., I earned a Master’s degree in Electrical and Electronics Engineering from Middle East Technical University, where I was supervised by Professor Dr. İlkay Ulusoy. My master’s research centered on designing deep learning models that generalize effectively with limited supervision, exhibit resilience to catastrophic forgetting, and identify their limitations.
 </p>
