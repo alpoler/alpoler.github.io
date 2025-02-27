@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Bias for Action: Video Implicit Neural Representations with Bias Modulation">
+  <meta property="og:title" content="Bias for Action: Video Implicit Neural Representations with Bias Modulation"/>
+  <meta property="og:description" content="Bias for Action: Video Implicit Neural Representations with Bias Modulation"/>
+  <meta property="og:url" content="alpoler.github.io/actioner"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+<!--   <meta property="og:image" content="static/image/your_banner_image.png" /> -->
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Bias for Action: Video Implicit Neural Representations with Bias Modulation">
+  <meta name="twitter:description" content="Bias for Action: Video Implicit Neural Representations with Bias Modulation">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Implicit Neural Representation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Bias for Action: Video Implicit Neural Representations with Bias Modulation</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Bias for Action: Video Implicit Neural Representations with Bias Modulation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://alpoler.github.io" target="_blank">Alper Kayabasi</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://anilrgukt.github.io/" target="_blank">Anil Kumar Vadathya</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://www.guhabalakrishnan.com/" target="_blank">Guha Balakrishnan</a><sup>3</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://vishwa91.github.io/" target="_blank">Vishwanath Saragadam</a><sup>1</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>University of California Riverside<br><sup>2</sup>Neal Cancer Center,Houston Methodist Hospital<br><sup>3</sup>Rice University </span>
+<!--                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2501.09277" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!--<span class="link-block">
+                      <a href="https://arxiv.org" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2501.09277" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <h2 class="subtitle has-text-centered">
+We introduce a novel INR architecture for video modeling. Fundamentally, an INR can be interpreted as a basis function expansion of a signal, where weights determine the shape of the basis functions, while biases control their translation. Building on this, our design shares weights across the video to maintain consistent basis functions while assigning a unique bias to each frame. This approach effectively models the shift of basis functions, capturing motion within the video.        </h2>
+
+      <div class="video-container">
+        <div class="video-text">Dramatic Interpolation Task x10</div>
+        <video poster="" id="tree1" autoplay playsinline preload muted loop height="100%">
+          <source src="static/videos/slowmo.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <div class="video-container">
+        <div class="video-text">Video Denoising</div>
+        <video poster="" id="tree2" autoplay playsinline preload muted loop height="100%">
+          <source src="static/videos/denoising.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <div class="video-container">
+        <div class="video-text">Video Inpainting</div>
+        <video poster="" id="tree3" autoplay playsinline preload muted loop height="100%">
+          <source src="static/videos/inpainting.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<style>
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+.video-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 5px;
+  box-sizing: border-box;
+}
+</style>
+
+
+  
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose a new continuous video modeling framework based on implicit neural representations (INRs) called ActINR. At the core of our approach is the observation that INRs can be considered as a learnable dictionary, with the shapes of the basis functions governed by the weights of the INR, and their locations governed by the biases. Given compact non-linear activation functions, we hypothesize that an INR's biases are suitable to capture motion across images, and facilitate compact representations for video sequences. Using these observations, we design ActINR to share INR weights across frames of a video sequence, while using unique biases for each frame. We further model the biases as the output of a separate INR conditioned on time index to promote smoothness. By training the video INR and this bias INR together, we demonstrate unique capabilities, including 10x video slow motion, 4x spatial super resolution along with 2x slow motion, denoising, and video inpainting. ActINR performs remarkably well across numerous video processing tasks (often achieving more than 6dB improvement), setting a new standard for continuous modeling of videos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+ <section class="section">
+<div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-16">
+      <h2 class="title is-3">Qualitative Results and Comparisons</h2>
+      <div class="content has-text-justified">
+        <div class="container">
+          <img src="./static/images/qual.svg" width="1000" height="auto" />
+          <p class="has-text-centered">
+             Qualitative results for 2× interpolation
+           </p>
+          <br />
+        </div>
+        <div class="container">
+          <img src="./static/images/qual2.svg" width="1000" height="auto" />
+            <p class="has-text-centered">
+Qualitative Results for 10× interpolation.           </p>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+  
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img src="./static/images/im4.jpeg" alt="Human part edits"/>
+        <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="./static/images/im1.jpeg" alt="3D-consistent accessory edits"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="./static/images/im2.jpeg" alt="Animal part edits"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item">
+      <img src="./static/images/im3.jpeg" alt="Cross-generator localized edits"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section> -->
+<!-- End image carousel -->
+
+
+
+
+<!-- Youtube video -->
+<!--<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!--<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!--<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>-->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{kayabasi2025bias,
+      title={Bias for Action: Video Implicit Neural Representations with Bias Modulation}, 
+      author={Alper Kayabasi, Anil Kumar Vadathya, Guha Balakrishnan, Vishwanath Saragadam},
+      year={2025},
+      eprint={2501.09277},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
