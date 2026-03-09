@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alper Kayabasi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #faf9f7;
+            --text: #1a1a1a;
+            --text-secondary: #555;
+            --accent: #1a5276;
+            --accent-light: #2980b9;
+            --border: #e0ddd8;
+            --card-bg: #ffffff;
+            --tag-bg: #eaf2f8;
+            --tag-text: #1a5276;
+            --highlight: #d4a017;
+            --max-width: 820px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- Header / Hero --- */
+        .hero {
+            padding: 60px 0 40px;
+            display: flex;
+            gap: 36px;
+            align-items: flex-start;
+        }
+
+        .avatar-wrapper {
+            flex-shrink: 0;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 3px solid var(--border);
+            background: #ddd;
+        }
+
+        .avatar-placeholder {
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            border: 3px solid var(--border);
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Source Serif 4', serif;
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+
+        .hero-info h1 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+            color: var(--text);
+        }
+
+        .hero-info .affiliation {
+            font-size: 16px;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+
+        .hero-info .bio {
+            color: var(--text-secondary);
+            font-size: 14.5px;
+            line-height: 1.75;
+        }
+
+        .links {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            padding: 6px 14px;
+            border: 1.5px solid var(--border);
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            background: var(--card-bg);
+        }
+
+        .links a:hover {
+            border-color: var(--accent);
+            background: var(--tag-bg);
+        }
+
+        .links a svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        /* --- Sections --- */
+        .section {
+            padding: 36px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text);
+            letter-spacing: -0.3px;
+        }
+
+        /* --- Research Interests --- */
+        .research-text {
+            color: var(--text-secondary);
+            font-size: 14.5px;
+            line-height: 1.8;
+        }
+
+        /* --- Publications --- */
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .pub-item {
+            display: flex;
+            gap: 20px;
+            padding: 18px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            transition: box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .pub-item:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border-color: #ccc;
+        }
+
+        .pub-thumb {
+            flex-shrink: 0;
+            width: 160px;
+            height: 100px;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pub-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pub-thumb-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #999;
+        }
+
+        .pub-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .pub-venue {
+            display: inline-block;
+            font-size: 11.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+        }
+
+        .pub-venue.cvpr { background: #e8f5e9; color: #2e7d32; }
+        .pub-venue.wacv { background: #e3f2fd; color: #1565c0; }
+        .pub-venue.eccv { background: #fce4ec; color: #c62828; }
+        .pub-venue.siu  { background: #fff3e0; color: #e65100; }
+        .pub-venue.spie { background: #f3e5f5; color: #6a1b9a; }
+        .pub-venue.arxiv { background: #efebe9; color: #4e342e; }
+
+        .pub-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 15.5px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 4px;
+            color: var(--text);
+        }
+
+        .pub-authors {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .pub-authors .me {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .pub-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .pub-links a {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--accent-light);
+            text-decoration: none;
+            padding: 3px 10px;
+            border-radius: 4px;
+            background: var(--tag-bg);
+            transition: background 0.2s;
+        }
+
+        .pub-links a:hover {
+            background: #d5e8f5;
+        }
+
+        /* --- Experience --- */
+        .exp-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .exp-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .exp-date {
+            flex-shrink: 0;
+            width: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            padding-top: 2px;
+        }
+
+        .exp-content h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .exp-content .role {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .exp-content p {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* --- Education --- */
+        .edu-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .edu-date {
+            flex-shrink: 0;
+            width: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            padding-top: 2px;
+        }
+
+        .edu-content h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 1px;
+        }
+
+        .edu-content .degree {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+        }
+
+        .edu-content .detail {
+            font-size: 12.5px;
+            color: #888;
+        }
+
+        /* --- Honors --- */
+        .honors-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .honor-item {
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+        }
+
+        .honor-year {
+            flex-shrink: 0;
+            width: 50px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .honor-text {
+            color: var(--text-secondary);
+        }
+
+        /* --- Services --- */
+        .service-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 12.5px;
+            color: #aaa;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 640px) {
+            .hero {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+                padding: 40px 0 30px;
+            }
+
+            .links {
+                justify-content: center;
+            }
+
+            .pub-item {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .pub-thumb {
+                width: 100%;
+                height: 140px;
+            }
+
+            .exp-item, .edu-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .exp-date, .edu-date {
+                width: auto;
+            }
+
+            .honor-item {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .honor-year { width: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Hero -->
+        <div class="hero">
+            <div class="avatar-wrapper">
+                <!-- Replace with your photo: <img class="avatar" src="media/avatar.jpg" alt="Alper Kayabasi"> -->
+                <div class="avatar-placeholder">AK</div>
+            </div>
+            <div class="hero-info">
+                <h1>Alper Kayabasi</h1>
+                <div class="affiliation">PhD Student, University of California Riverside</div>
+                <p class="bio">
+                    I work on deep learning under limited data and beyond the reach of RGB sensors. My research addresses inverse problems in video restoration and video depth estimation, with a focus on implicit neural representations and self-supervised learning. I am advised by <a href="#" style="color:var(--accent);">Prof. Vishwanath Saragadam</a>.
+                </p>
+                <div class="links">
+                    <a href="akaya003@ucr.edu">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        Email
+                    </a>
+                    <a href="https://github.com/your-github" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=zFYCmJEAAAAJ&hl=tr" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+                        Scholar
+                    </a>
+                    <a href="media/cv_alper_kayabasi.pdf" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        CV
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Interests -->
+        <div class="section">
+            <h2 class="section-title">Research Interests</h2>
+            <p class="research-text">
+                Video problems pose unique challenges compared to static images&mdash;most notably strict temporal coherence requirements and severe data scarcity driven by the curse of dimensionality. My research addresses these bottlenecks by focusing on inverse problems in video restoration and video depth estimation. I also have experience with implicit neural representations, event cameras, few-shot segmentation, and metric learning.
+            </p>
+        </div>
+
+        <!-- Publications -->
+        <div class="section">
+            <h2 class="section-title">Publications</h2>
+            <div class="pub-list">
+
+                <!-- Arxiv: Event-assisted -->
+                <div class="pub-item">
+                    <div class="pub-thumb">
+                        <div class="pub-thumb-placeholder">Event Camera</div>
+                    </div>
+                    <div class="pub-info">
+                        <span class="pub-venue arxiv">Arxiv</span>
+                        <div class="pub-title">Event-assisted Contrast Improvement for Robust Object Detection via Deblurring</div>
+                        <div class="pub-authors">
+                            <span class="me">Alper Kayabasi</span>, et al.
+                        </div>
+                        <div class="pub-links">
+                            <!-- <a href="#">Paper</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CVPR 2026: SNP -->
+                <div class="pub-item">
+                    <div class="pub-thumb">
+                        <img src="media/snp_fig.png" alt="SNP Teaser">
+                    </div>
+                    <div class="pub-info">
+                        <span class="pub-venue cvpr">CVPR 2026</span>
+                        <div class="pub-title">The Surprising Effectiveness of Noise Pretraining for Implicit Neural Representations</div>
+                        <div class="pub-authors">
+                            Kushal Vyas, <span class="me">Alper Kayabasi</span>, Daniel Kim, Vishwanath Saragadam, Ashok Veeraraghavan, Guha Balakrishnan
+                        </div>
+                        <div class="pub-links">
+                            <!-- <a href="#">Paper</a> <a href="#">Project</a> <a href="#">Code</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CVPR 2025: ActINR -->
+                <div class="pub-item">
+                    <div class="pub-thumb">
+                        <img src="media/actinr_fig.png" alt="ActINR Figure">
+                    </div>
+                    <div class="pub-info">
+                        <span class="pub-venue cvpr">CVPR 2025</span>
+                        <div class="pub-title">Bias for Action: Video Implicit Neural Representations with Bias Modulation</div>
+                        <div class="pub-authors">
+                            <span class="me">Alper Kayabasi</span>, Anil Kumar Vadathya, Guha Balakrishnan, Vishwanath Saragadam
+                        </div>
+                        <div class="pub-links">
+                            <!-- <a href="#">Paper</a> <a href="#">Project</a> <a href="#">Code</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIU 2023 -->
+                <div class="pub-item">
+                    <div class="pub-thumb">
+                        <div class="pub-thumb-placeholder">Frozen CLIP</div>
+                    </div>
+                    <div class="pub-info">
+                        <span class="pub-venue siu">SIU 2023</span>
+                        <div class="pub-title">Detecting Improper Driving via Frozen CLIP</div>
+                        <div class="pub-authors">
+                            Hamza Etcibasi, <span class="me">Alper Kayabasi</span>, Gulin Tufekci
+                        </div>
+                        <div class="pub-links">
+                            <!-- <a href="#">Paper</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WACV 2023 -->
+                <div class="pub-item">
+                    <div class="pub-thumb">
+                        <div class="pub-thumb-placeholder">Few-Shot Seg</div>
+                    </div>
+                    <div class="pub-info">
+                        <span class="pub-venue wacv">WACV 2023</span>
+                        <div class="pub-title">Elimination of Non-Novel Segments at Multi-Scale for Few-Shot Segmentation</div>
+                        <div class="pub-authors">
+                            <span class="me">Alper Kayabasi</span>, Gulin Tufekci, Ilkay Ulusoy
+                        </div>
+                        <div class="pub-links">
+                            <!-- <a href="#">Paper</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ECCV Workshop 2022 -->
+                <div class="pub-item">
+                    <div class="pub-thumb">
+                        <div class="pub-thumb-placeholder">Drowsiness</div>
+                    </div>
+                    <div class="pub-info">
+                        <span class="pub-venue eccv">ECCV W 2022</span>
+                        <div class="pub-title">Detecting Driver Drowsiness as an Anomaly Using LSTM Autoencoders</div>
+                        <div class="pub-authors">
+                            Gulin Tufekci*, <span class="me">Alper Kayabasi*</span>, Erdem Akagunduz, Ilkay Ulusoy <span style="font-size:11px; color:#999;">(*Equal Contribution)</span>
+                        </div>
+                        <div class="pub-links">
+                            <!-- <a href="#">Paper</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIU 2022 -->
+                <div class="pub-item">
+                    <div class="pub-thumb">
+                        <div class="pub-thumb-placeholder">Temporal Patterns</div>
+                    </div>
+                    <div class="pub-info">
+                        <span class="pub-venue siu">SIU 2022</span>
+                        <div class="pub-title">A Comparative Analysis of Revealing Temporal Patterns for Driver Drowsiness Detection</div>
+                        <div class="pub-authors">
+                            Gulin Tufekci, <span class="me">Alper Kayabasi</span>, Ilkay Ulusoy
+                        </div>
+                        <div class="pub-links">
+                            <!-- <a href="#">Paper</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPIE 2021 -->
+                <div class="pub-item">
+                    <div class="pub-thumb">
+                        <div class="pub-thumb-placeholder">Metric Learning</div>
+                    </div>
+                    <div class="pub-info">
+                        <span class="pub-venue spie">SPIE 2021</span>
+                        <div class="pub-title">Comparison of Distance Metric Learning Methods Against Label Noise for Fine-Grained Recognition</div>
+                        <div class="pub-authors">
+                            <span class="me">Alper Kayabasi</span>, Kaan Karaman, Ibrahim Batuhan Akkaya
+                        </div>
+                        <div class="pub-links">
+                            <!-- <a href="#">Paper</a> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="exp-list">
+                <div class="exp-item">
+                    <div class="exp-date">2025</div>
+                    <div class="exp-content">
+                        <h3>OMNIVISION &mdash; Summer Research Intern</h3>
+                        <div class="role">Santa Clara, CA</div>
+                        <p>Analyzed how event-based deblurring improves object detection under varying illumination and non-uniform motion blur. Demonstrated 6000 RPM fan speed estimation via short-time Fourier transform on accumulated events, where RGB fails from blur.</p>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-date">2019 &ndash; 2023</div>
+                    <div class="exp-content">
+                        <h3>ASELSAN Research Center &mdash; Research Engineer</h3>
+                        <div class="role">Ankara, Turkey</div>
+                        <p>Developed autofocus for microscopy (COVID-19 detection prototype), investigated metric learning robustness under label noise, and trained video action recognition models for driver drowsiness detection. Supervised an intern whose work won a best student paper award.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-item">
+                <div class="edu-date">2023 &ndash; now</div>
+                <div class="edu-content">
+                    <h3>University of California Riverside</h3>
+                    <div class="degree">Ph.D. in Electrical Engineering &middot; GPA 4.00</div>
+                    <div class="detail">Advisor: Asst. Prof. Vishwanath Saragadam</div>
+                </div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-date">2020 &ndash; 2023</div>
+                <div class="edu-content">
+                    <h3>Middle East Technical University</h3>
+                    <div class="degree">M.S. in Electrical and Electronics Engineering &middot; GPA 3.79</div>
+                    <div class="detail">Advisor: Prof. Dr. Ilkay Ulusoy</div>
+                </div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-date">2015 &ndash; 2020</div>
+                <div class="edu-content">
+                    <h3>Hacettepe University</h3>
+                    <div class="degree">B.S. in Electrical and Electronics Engineering &middot; GPA 3.64, ranked 1st</div>
+                    <div class="detail">Advisor: Prof. Dr. Feza Arikan</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honors -->
+        <div class="section">
+            <h2 class="section-title">Honors</h2>
+            <div class="honors-list">
+                <div class="honor-item">
+                    <span class="honor-year">2023</span>
+                    <span class="honor-text">Dean's Distinguished Fellowship Award, UC Riverside</span>
+                </div>
+                <div class="honor-item">
+                    <span class="honor-year">2023</span>
+                    <span class="honor-text">Alper Atalay Best Student Paper Award, SIU 2023 Conference</span>
+                </div>
+                <div class="honor-item">
+                    <span class="honor-year">2020</span>
+                    <span class="honor-text">Ranked 1st among 132 undergraduate students, Hacettepe University EEE</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academic Services -->
+        <div class="section">
+            <h2 class="section-title">Academic Service</h2>
+            <p class="service-text">
+                <strong>2026:</strong> Reviewer for CVPR, ECCV, BMVC<br>
+                <strong>2025:</strong> Reviewer for CVPR, ICCV, IEEE Transactions on Computational Imaging, ICIP
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            &copy; Alper Kayabasi
+        </div>
+    </footer>
+
+</body>
+</html>
